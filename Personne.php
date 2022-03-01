@@ -2,8 +2,8 @@
 <?php
 
 class Personne {
-    public  $nom;
-    public $prenom;
+    private  $nom;
+    private $prenom;
 
     function __construct($nom, $prenom)
     {

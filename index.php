@@ -1,9 +1,12 @@
 <?php
-
+require("Personne.php");
 require("Client.php");
+require("Electeur.php");
 
 $bloup = new Client("Ariel", " Jonas", "1 avenue personne Lyon");
-$bloup->setPrenom("Emilie");
+$floup = new Electeur($bloup->getNom(),$bloup->getPrenom(),"Lyon",False );
+$floup->aVote();
+
 
 
 
@@ -17,8 +20,9 @@ $bloup->setPrenom("Emilie");
     <title>Document</title>
 </head>
 <body>
-    <h4>Prenom: <?php echo $bloup->getNom()  ?> </h4>
-    <h4>Nom: <?php echo $bloup->getPrenom()  ?></h4>
-    <h4>Adresse : <?php echo $bloup->getCoordonnee() ?> </h4>
+    <p>Prenom: <?php echo $bloup->getNom()  ?> </p>
+    <p>Nom: <?php echo $bloup->getPrenom()  ?></p>
+    <p>Adresse : <?php echo $bloup->getCoordonnee() ?> </p>
+    <p>Vote : <?php  $floup->isVoter();  ?></p>
 </body>
 </html>

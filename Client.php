@@ -1,6 +1,6 @@
 
 <?php 
-require("Personne.php");
+
 
 class Client extends Personne {
 
